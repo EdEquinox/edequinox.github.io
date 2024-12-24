@@ -233,6 +233,11 @@ img {
     width: 40px;
 }
 
+#personalbiocss{
+    text-align: center;
+    font-size: smaller;
+}
+
 .overlay-text .btn-primary:hover {
     background-color: #0056b3;
 }
