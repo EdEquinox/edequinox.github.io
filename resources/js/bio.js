@@ -1,30 +1,30 @@
 export const timestamps=[
     {
-        color: "--accent-color:#41516C",
+        color: "--accent-color:#6E8B85",
         date: "Sept. 2018 - Present",
         title: "STARTED MY DEGREE",
         description: "I started my degree in Computer Engeneering at the Instituto Politécnico de Coimbra, Portugal.",
     },
     {
-        color: "--accent-color:#FBCA3E",
+        color: "--accent-color:#9BC59D",
         date: "July 2019 - Present",
         title: "FIREWATCH",
         description: "I started working as a firewatcher in the summer of 2019 and have been doing it every summer since.",
     },
     {
-        color: "--accent-color:#E24A68",
+        color: "--accent-color:#CCD584",
         date: "2021 - Present",
         title: "FREELANCING",
         description: "I started freelancing as a developer in 2021 and have been doing it ever since.",
     },
     {
-        color: "--accent-color:#1B5F8C",
+        color: "--accent-color:#C8AD55",
         date: "Jan. 2023 - Present",
         title: "TECHCARE",
         description: "I created my own computer and electronics fixing business, TechCare.",
     },
     {
-        color: "--accent-color:#4CADAD",
+        color: "--accent-color:#B5864F",
         date: "Aug. 2024 - Present",
         title: "LACTOMETER",
         description: "I developed my biggest project yet, Lactometer, in cooperation with RaveShape.",

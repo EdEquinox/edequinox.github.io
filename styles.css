@@ -15,16 +15,27 @@ body {
     /* Make the body occupy full height */
     width: 100%;
     /* Make the body occupy full width */
-    background-image: url('../images/Simple\ Shiny.svg');
-    background-size: cover;
-    background-repeat: repeat-y;
-    background-position: center;
+
+    background: rgb(65,81,108);
+    background: -moz-linear-gradient(97deg, rgba(65,81,108,1) 0%, rgba(110,139,133,1) 29%, rgba(155,197,157,1) 59%, rgba(204,213,132,1) 83%, rgba(200,173,85,1) 100%);
+    background: -webkit-linear-gradient(97deg, rgba(65,81,108,1) 0%, rgba(110,139,133,1) 29%, rgba(155,197,157,1) 59%, rgba(204,213,132,1) 83%, rgba(200,173,85,1) 100%);
+    background: linear-gradient(97deg, rgba(65,81,108,1) 0%, rgba(110,139,133,1) 29%, rgba(155,197,157,1) 59%, rgba(204,213,132,1) 83%, rgba(200,173,85,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41516c",endColorstr="#c8ad55",GradientType=1);
+
+    /* Ensure background goes all the way the full height of the page even if it chnages */
+    background-size: 300% 800%;
     /* Add movement to background left to rigth */
-    animation: moveBackground 40s ease-in-out infinite;
-    background-color: rgb(21, 67, 96);
+    animation: moveBackground 15s ease-in-out infinite;
 }
 
+#page{
+    margin-top: 100px;
+}
 
+.headerbio{
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
 h1,
 h2,
@@ -58,12 +69,21 @@ img {
 }
 
 #top-bar {
-    background-color: #494e53 !important;
+    background-color: #3f2c27 !important;
     /* Dark background color */
     color: white;
-    /* Light text color */
-    padding-bottom: 50px !important;
-    background: linear-gradient(to bottom, #494e53, rgba(73, 78, 83, 0)) !important;
+
+}
+
+#topbarpadding{
+    height: 1px !important;
+    padding-bottom: 10px;
+    background: linear-gradient(to bottom, #3F2C27, #3f2c2777) !important;
+}
+#topbarpadding2{
+    height: 1px !important;
+    padding-bottom: 10px;
+    background: linear-gradient(to bottom, #3f2c2777, #3f2c2700) !important;
 }
 
 .dwn-div {
@@ -74,19 +94,13 @@ img {
     width: 100%;
 }
 
-@media (max-width: 992px) {
-    .dwn-div {
-        display: none;
-    }
-}
-
 .nav-link {
     color: white !important;
     /* Light text color */
-    background-color: #494e53;
-    border: 1px solid rgb(21, 67, 96);
+    background-color: #3F2C27;
     padding: 5px 10px !important;
     border-radius: 5px;
+
 }
 
 .litleprojbtn {
@@ -107,7 +121,7 @@ img {
 }
 
 .nav-link:hover {
-    background-color: rgb(21, 67, 96);
+    background-color: #41516c;
     transition: background-color 0.3s ease-in-out;
     /* Change background color on hover */
 }
@@ -123,10 +137,8 @@ img {
     padding-left: 30px !important;
 }
 
-.navbar-nav {
-    width: 400px;
-    flex-direction: row;
-    justify-content: space-between;
+#spacer{
+    width: 50px !important;
 }
 
 /* Carousel Styles */
@@ -434,12 +446,11 @@ button:hover .button-text {
 }
 
 .download-cv-btn {
-    --😀: rgb(26, 83, 119);
-    --😀😀: rgb(21, 67, 96);
-    --😀😀😀: rgb(16, 51, 73);
+    --😀: #41516c;
+    --😀😀: #617494;
+    --😀😀😀: #6e8b85;
     cursor: pointer;
     width: 184px;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -722,15 +733,16 @@ button:hover .button-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 600px !important;
+    width: 500px !important;
     align-self: baseline;
+    padding-bottom: 100px;
 }
 
 .timelinecol {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1000px !important;
+    width: 800px !important;
     align-self: baseline;
 }
 
