@@ -50,7 +50,7 @@ export const info = {
         }
     ],
     education: "Currently studying Software Engineering at Instituto Politecnico de Engenharia de Coimbra",
-    exp: "Freelancer, Computer and Electronics Fixer, Firewatcher",
+    exp: "Freelancing, Computer and Electronics Repairing, Firewatching",
     prj: "Several projects, including a web application for a local business.",
     lead:"Passionate about solving problems. Open source enthusiast. Always learning.",
     role: "Software Engeneering Student & Freelancer",
@@ -111,7 +111,7 @@ export function loadInfo() {
     document.getElementById("agebio").innerHTML = `<h5>Age</h5><p class="text-muted" id="agebio">${info.age} years old</p>`;
     document.getElementById("emailbio").innerHTML = `<h5>Email</h5><p class="text-muted" id="emailbio">${info.email}</p>`;
     document.getElementById("educationbio").innerHTML = `<h5>Education</h5><p class="text-muted" id="educationbio">${info.education}</p>`;
-    document.getElementById("expbio").innerHTML = `<h5>Work Experience</h5><p class="text-muted" id="expbio">${info.exp}</p>`;
+    document.getElementById("expbio").innerHTML = `<h5>Working Experience</h5><p class="text-muted" id="expbio">${info.exp}</p>`;
     document.getElementById("prjbio").innerHTML = `<h5>Projects</h5><p class="text-muted" id="prjbio">${info.prj}</p>`;
     
 }

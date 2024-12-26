@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="padding-top: 0px;">
+<head>
+    <title>Spotle Infinity</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script_spotle.js"></script>
+    <link rel="stylesheet" href="css/styles_spotle.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body style="padding-top: 0px;">
+    <div class="content">
+
+        <h1 id="title">Spotle Infinity</h1>
+    
+        <p id="desc">Reload the page to generate a new game!</p>
+    
+        <div id="link_div">
+            <h3 id="link"></h3> 
+    
+        </div>
+        <div class="buttons">
+            
+            <button class="button" id="open" onclick="openLink()" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>Open Link</button>
+            <button id="click" class="button" onclick="reloadPage()">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                </svg>New Random Game</button>
+    
+        </div>
+        <div class="modes">
+            <button class="button" onclick="easymode()" title="This is the easy mode. It selects from the first 200 artists.">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>Easy Mode</button>
+            <button class="button" onclick="genZ()" title="This is the Gen Z mode. It selects artists who debuted between 2018 and 2024.">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><path d="M22.5 9.84202C20.4357 9.84696 18.4221 9.20321 16.7435 8.00171V16.3813C16.7429 17.9333 16.2685 19.4482 15.3838 20.7233C14.499 21.9984 13.246 22.973 11.7923 23.5168C10.3387 24.0606 8.75362 24.1477 7.24914 23.7664C5.74466 23.3851 4.39245 22.5536 3.37333 21.383C2.3542 20.2125 1.71674 18.7587 1.54617 17.2161C1.3756 15.6735 1.68007 14.1156 2.41884 12.7507C3.15762 11.3858 4.2955 10.279 5.68034 9.57823C7.06517 8.87746 8.63095 8.61616 10.1683 8.82927V13.0439C9.4648 12.8227 8.70938 12.8293 8.0099 13.063C7.31041 13.2966 6.70265 13.7453 6.2734 14.345C5.84415 14.9446 5.61536 15.6646 5.6197 16.402C5.62404 17.1395 5.8613 17.8567 6.29759 18.4512C6.73387 19.0458 7.34688 19.4873 8.04906 19.7127C8.75125 19.9381 9.5067 19.9359 10.2075 19.7063C10.9084 19.4768 11.5188 19.0316 11.9515 18.4345C12.3843 17.8374 12.6173 17.1188 12.6173 16.3813V0H16.7435C16.7406 0.348435 16.7698 0.696395 16.8307 1.03948V1.03948C16.9741 1.80537 17.2722 2.53396 17.7068 3.18068C18.1415 3.8274 18.7035 4.37867 19.3585 4.80075C20.2903 5.41688 21.3829 5.74528 22.5 5.74505V9.84202Z"/></svg>Gen Z Mode</button>
+            <button class="button" onclick="y80s90s2000s()" title="This is the 80s, 90s, and 2000s mode. It selects artists who debuted between 1980 and 2009.">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><circle cx="12" cy="14" r="4"></circle><line x1="12" y1="6" x2="12.01" y2="6"></line></svg>80s, 90s, 2000s Mode</button>
+        </div>
+        <div class="helpdiv" id="helpdiv" onclick="toggleHelp()">
+            <input type="checkbox" name="help" id="help"> 
+            <label for="help">Show Help</label>
+        </div>
+    </div>
+    <footer>
+
+        <p>Spotle Infinity is a little, free and open-source website that generates a random Spotle game for you to play!</p>
+        <p>Created by <a href="https://github.com/EdEquinox" target="_blank">EdEquinox</a></p>
+        <p>Based on the game "Spotle" by <a href="https://twitter.com/Spotle_io">latwhite studios </a></p>
+
+        </a></p>
+    </footer>
+</body>
+</html>

@@ -2,53 +2,53 @@ export const projects = [
     {
         title: "Lactometer",
         description: "Developed in collaboration with RaveShape, it's a tool that enables personal trainers to accurately assess their trainees' lactate levels based on running performance.",
-        images: ["slide2.jpg", "slide1.jpg"],
+        images: ["lactometer-back.jpg", "lactometer-back.jpg"],
         language: "Python",
         tools: ["Vercel", "Django"],
     },
     {
         title: "strokey",
         description: "Developed in C++ with WINAPI and JUCE, it's a tool that enables users to use their MIDI device to control their computer actions.",
-        images: ["slide2.jpg", "slide1.jpg"],
+        images: ["strokey-back.jpg", "strokey-back.jpg"],
         language: "C++",
         tools: ["JUCE", "WinAPI"],
     },
     {
         title: "spotle_infinity",
         description: "A web application based on the Spotle game that enables users to play custom levels and create their own levels.",
-        images: ["slide3.jpg", "slide1.jpg"],
+        images: ["spotle-back.jpg", "spotle-back.jpg"],
         language: "JavaScript, HTML, CSS"
     },
     {
         title: "StashExtract",
         description: "Built with Python, it's a tool that enables users to extract and analyze data from the Stash app. GUI available.",
-        images: ["slide3.jpg", "slide4.jpg"],
+        images: ["stash-back.jpg", "stash-back.jpg"],
         language: "Python",
         tools: ["Tkinter", "BeautifulSoup", "selenium"]
     },
     {
         title: "MusicboardExtract",
         description: "Built with Python and deployed in Vercel, it's a tool that enables users to extract and analyze data from the Musicboard app.",
-        images: ["slide2.jpg", "slide1.jpg"],
+        images: ["mboard-back.jpg", "mboard-back.jpg"],
         language: "Python",
         tools: ["Vercel", "BeautifulSoup", "selenium"]
     },
     {
         title: "Tour Advisor",
         description: "One of my student projects, developed in Kotlin, it's a mobile application for users to explore new places and get recommendations.",
-        images: ["slide3.jpg", "slide4.jpg"],
+        images: ["touradvisor-back.jpg", "touradvisor-back.jpg"],
         language: ["Kotlin", "SQL"],
     },
     {
         title: "PacMan-o",
         description: "One of my student projects, developed in Kotlin, it's a mobile application for users to explore new places and get recommendations.",
-        images: ["slide3.jpg", "slide4.jpg"],
+        images: ["pac-back.jpg", "pac-back.jpg"],
         language: "Java",
     },
     {
         title: "FairShare",
         description: "One of my student projects, developed in Kotlin, it's a mobile application for users to explore new places and get recommendations.",
-        images: ["slide3.jpg", "slide4.jpg"],
+        images: ["fair-back.jpg", "fair-back.jpg"],
         language: ["Java", "SQL"],
     },
 ];
@@ -99,7 +99,7 @@ export function createProjectCard(project) {
                     <div class="carousel-inner">
                     ${project.images.map((image, index) => `
                         <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                        <img src="${image}" class="d-block w-100" alt="Project Image">
+                        <img src="images/${image}" class="d-block w-100" alt="Project Image">
                         </div>
                     `).join('')}
                     </div>
@@ -110,7 +110,7 @@ export function createProjectCard(project) {
                     <div class="col-10">
                         <p class="card-text">${project.description}</p>
                     </div>
-                    <div class="col-2 button-plus">
+                    <div class="col-2 button-plus" id="btn_${project.title}">
                         <button class="learn-more">
                         <span class="circle" aria-hidden="true">
                         <span class="icon arrow"></span>
@@ -150,6 +150,30 @@ export function loadProjectCards() {
     }
 }
 
+export function loadBtns(){
+    var btns = document.querySelectorAll(".button-plus");
+    console.log(btns);
+    btns.forEach(btn => {
+        btn.addEventListener("click", function() {
+            var project = projects.find(project => `btn_${project.title}` === btn.id);
+            console.log(project);
+            createPopup(project.title);
+            document.getElementById("popup").style.display = "block";
+        });
+    });
+    
+}
+
 export function loadProjectsPage(){
     loadProjectCards();
+    loadBtns();
+}
+
+export function createPopup(title) {
+    let popdiv = document.getElementById("popup-content");
+    fetch('../pages/projects/' + title + '.html')
+        .then(response => response.text())
+        .then(data => {
+            popdiv.innerHTML = data;
+        });
 }

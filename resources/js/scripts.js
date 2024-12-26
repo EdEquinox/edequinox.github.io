@@ -49,5 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     loadContent('pages/bio.html');
   });
+
+  window.onclick = function(event) {
+    if (event.target == document.getElementById("popup")) {
+        document.getElementById("popup").style.display = "none";        
+    }
+  }
   
 });
