@@ -49,4 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     loadContent('pages/bio.html');
   });
+  
 });

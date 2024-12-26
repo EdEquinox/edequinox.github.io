@@ -7,7 +7,7 @@ export const timestamps=[
     },
     {
         color: "--accent-color:#9BC59D",
-        date: "July 2019 - Present",
+        date: "July 2019 - Oct. 2024",
         title: "FIREWATCH",
         description: "I started working as a firewatcher in the summer of 2019 and have been doing it every summer since.",
     },
@@ -40,19 +40,14 @@ export const info = {
     social: [
         {
             name: "LinkedIn",
-            link: "https://www.linkedin.com/in/joaopedromarquesnox/",
-            logo: "linkedin.png",
+            link: "https://www.linkedin.com/in/josemarquesnox/",
+            logo: "linkedin",
         },
         {
             name: "GitHub",
-            link: "www.github.com/joaopedromarquesnox",
-            logo: "github.png",
-        },
-        {
-            name: "Twitter",
-            link: "www.twitter.com/joaopedromarquesnox",
-            logo: "twitter.png",
-        },
+            link: "https://www.github.com/EdEquinox",
+            logo: "github",
+        }
     ],
     education: "Currently studying Software Engineering at Instituto Politecnico de Engenharia de Coimbra",
     exp: "Freelancer, Computer and Electronics Fixer, Firewatcher",
@@ -93,6 +88,19 @@ export function loadTimestamps() {
     }
 }
 
+export function loadIcons() {
+    for (let i = 0; i < info.social.length; i++) {
+        const social = info.social[i];
+        document.getElementById("socialscol").innerHTML += `
+            <a id="${social.logo}link" href="${social.link}" style=" text-decoration: none; color: inherit">
+                <div class="bioicons" id="githublogo">
+                    <i class="devicon-${social.logo}-plain"></i>
+                </div>
+            </a>
+        `;
+    }
+}
+
 export function loadInfo() {
 
     document.getElementById("namebio").innerHTML = `<h1 class="display-4" id="namebio">${info.name}</h1>`;
@@ -112,4 +120,5 @@ export function loadInfo() {
 export function loadBio() {
     loadInfo();
     loadTimestamps();
+    loadIcons();
 }

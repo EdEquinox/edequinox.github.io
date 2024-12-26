@@ -6,6 +6,12 @@ html {
 }
 
 body {
+    --color1 : #291405;
+    --color2 : #381202;
+    --color3 : #3A1B05;
+    --color4 : #190C04;
+    --color5 : #351909;
+    --colorblue : #4b5970;
     font-family: 'Roboto', sans-serif;
     /* Use the Roboto font */
     margin: 0;
@@ -16,11 +22,11 @@ body {
     width: 100%;
     /* Make the body occupy full width */
 
-    background: rgb(65,81,108);
-    background: -moz-linear-gradient(97deg, rgba(65,81,108,1) 0%, rgba(110,139,133,1) 29%, rgba(155,197,157,1) 59%, rgba(204,213,132,1) 83%, rgba(200,173,85,1) 100%);
-    background: -webkit-linear-gradient(97deg, rgba(65,81,108,1) 0%, rgba(110,139,133,1) 29%, rgba(155,197,157,1) 59%, rgba(204,213,132,1) 83%, rgba(200,173,85,1) 100%);
-    background: linear-gradient(97deg, rgba(65,81,108,1) 0%, rgba(110,139,133,1) 29%, rgba(155,197,157,1) 59%, rgba(204,213,132,1) 83%, rgba(200,173,85,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41516c",endColorstr="#c8ad55",GradientType=1);
+    background: var(--colorblue);
+    background: -moz-linear-gradient(97deg, var(--color1) 0%, var(--color2) 22%, var(--color3) 44%, var(--color4) 66%, var(--color5) 88%);
+    background: -webkit-linear-gradient(97deg, var(--color1) 0%, var(--color2) 22%, var(--color3) 44%, var(--color4) 66%, var(--color5) 88%);
+    background: linear-gradient(97deg, var(--color1) 0%, var(--color2) 22%, var(--color3) 44%, var(--color4) 66%, var(--color5) 88%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--color1),endColorstr=var(--color5),GradientType=1);
 
     /* Ensure background goes all the way the full height of the page even if it chnages */
     background-size: 300% 800%;
@@ -29,12 +35,31 @@ body {
 }
 
 #page{
-    margin-top: 100px;
+    margin-top: 60px;
+}
+
+#logoimgbig{
+    height: 46px;
+    border-radius: 50%;
+}
+
+#logoimgsmall{
+    display: none;
 }
 
 .headerbio{
     margin-left: 50px;
     margin-right: 50px;
+}
+
+@media screen and (max-width: 991px) {
+    #logoimgbig{
+        display: none;
+    }
+    #logoimgsmall{
+        display: block;
+        height: 46px;
+    }    
 }
 
 h1,
@@ -44,6 +69,10 @@ h4,
 h5,
 h6,
 p {
+    color: white !important;
+}
+
+#rolebio{
     color: white !important;
 }
 
@@ -69,10 +98,19 @@ img {
 }
 
 #top-bar {
-    background-color: #3f2c27 !important;
+    background-color: var(--colorblue) !important;
     /* Dark background color */
     color: white;
 
+}
+
+#logo{
+    color: white !important;
+    /* Light text color */
+    font-size: 1.5rem;
+    /* Larger font size */
+    font-weight: bold;
+    /* Bold font weight */
 }
 
 #topbarpadding{
@@ -97,7 +135,7 @@ img {
 .nav-link {
     color: white !important;
     /* Light text color */
-    background-color: #3F2C27;
+    background-color: var(--colorblue);
     padding: 5px 10px !important;
     border-radius: 5px;
 
@@ -121,14 +159,14 @@ img {
 }
 
 .nav-link:hover {
-    background-color: #41516c;
+    background-color: var(--color1);
     transition: background-color 0.3s ease-in-out;
     /* Change background color on hover */
 }
 
 .litleprojbtn:hover,
 .litleprojbtn p:hover {
-    background-color: #494e53;
+    background-color: var(--color1);
     transition: background-color 0.3s ease-in-out;
     /* Change background color on hover */
 }
@@ -233,6 +271,36 @@ img {
     width: 40px;
 }
 
+#imgbio{
+    max-height: 250px;
+}
+
+.bioicons{
+    font-size: xx-large;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #socialscol{
+        margin-top: 30px !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        justify-content: start !important;
+    }
+    #socialscol i{
+        padding-right: 30px !important;
+    }
+    
+}
+
+
+#socialscol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
 #personalbiocss{
     text-align: center;
     font-size: smaller;
@@ -323,7 +391,7 @@ img {
 
 .hab-card {
     min-height: 92%;
-    background-color: #494e53 !important;
+    background-color: #41516c !important;
     color: white;
 }
 
