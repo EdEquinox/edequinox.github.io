@@ -898,6 +898,15 @@ button:hover .button-text {
     color: black !important;
 }
 
+#popupcont{
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+.white{
+    color: white !important;
+}
+
 #popup{
     display: none;
     position: fixed;
@@ -910,16 +919,18 @@ button:hover .button-text {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
+    color: #070707 !important;
 }
 
 /* Popup content */
 #popup-content {
-    background-color: #fefefe;
+    background-color: #000000af;
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 30%;
-    min-width: 500px !important;
+    min-width: 600px !important;
+    
 }
 
 /* Close button */

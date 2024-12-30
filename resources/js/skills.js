@@ -1,4 +1,4 @@
-import { projects,createMiniProjectCards } from './projects.js';
+import { projects,createMiniProjectCards,loadBtns } from './projects.js';
 
 export const languages = [
     {
@@ -92,4 +92,5 @@ export function loadLanguageCards() {
 
 export function loadLanguagePage(){
     loadLanguageCards();
+    loadBtns();
 }

@@ -2,53 +2,53 @@ export const projects = [
     {
         title: "Lactometer",
         description: "Developed in collaboration with RaveShape, it's a tool that enables personal trainers to accurately assess their trainees' lactate levels based on running performance.",
-        images: ["lactometer-back.jpg", "lactometer-back.jpg"],
+        images: ["lact-1.png", "lact-2.png"],
         language: "Python",
         tools: ["Vercel", "Django"],
     },
     {
         title: "strokey",
         description: "Developed in C++ with WINAPI and JUCE, it's a tool that enables users to use their MIDI device to control their computer actions.",
-        images: ["strokey-back.jpg", "strokey-back.jpg"],
+        images: ["strokey-1.png", "strokey-1.png"],
         language: "C++",
         tools: ["JUCE", "WinAPI"],
     },
     {
         title: "spotle_infinity",
         description: "A web application based on the Spotle game that enables users to play custom levels and create their own levels.",
-        images: ["spotle-back.jpg", "spotle-back.jpg"],
+        images: ["spot-1.png", "spot-1.png"],
         language: "JavaScript, HTML, CSS"
     },
     {
         title: "StashExtract",
         description: "Built with Python, it's a tool that enables users to extract and analyze data from the Stash app. GUI available.",
-        images: ["stash-back.jpg", "stash-back.jpg"],
+        images: ["stash-1.png", "stash-1.png"],
         language: "Python",
         tools: ["Tkinter", "BeautifulSoup", "selenium"]
     },
     {
         title: "MusicboardExtract",
         description: "Built with Python and deployed in Vercel, it's a tool that enables users to extract and analyze data from the Musicboard app.",
-        images: ["mboard-back.jpg", "mboard-back.jpg"],
+        images: ["mboard-1.png", "mboard-1.png"],
         language: "Python",
         tools: ["Vercel", "BeautifulSoup", "selenium"]
     },
     {
         title: "Tour Advisor",
         description: "One of my student projects, developed in Kotlin, it's a mobile application for users to explore new places and get recommendations.",
-        images: ["touradvisor-back.jpg", "touradvisor-back.jpg"],
+        images: ["tour-1.png", "tour-2.png"],
         language: ["Kotlin", "SQL"],
     },
     {
         title: "PacMan-o",
         description: "One of my student projects, developed in Kotlin, it's a mobile application for users to explore new places and get recommendations.",
-        images: ["pac-back.jpg", "pac-back.jpg"],
+        images: ["pac-1.png", "pac-2.png"],
         language: "Java",
     },
     {
         title: "FairShare",
         description: "One of my student projects, developed in Kotlin, it's a mobile application for users to explore new places and get recommendations.",
-        images: ["fair-back.jpg", "fair-back.jpg"],
+        images: ["fair-1.png", "fair-1.png"],
         language: ["Java", "SQL"],
     },
 ];
@@ -152,10 +152,22 @@ export function loadProjectCards() {
 
 export function loadBtns(){
     var btns = document.querySelectorAll(".button-plus");
+    var other = document.querySelectorAll(".litleprojbtn");
     console.log(btns);
     btns.forEach(btn => {
         btn.addEventListener("click", function() {
             var project = projects.find(project => `btn_${project.title}` === btn.id);
+            console.log(project);
+            createPopup(project.title);
+            document.getElementById("popup").style.display = "block";
+        });
+    });
+    console.log(other);
+    other.forEach(btn => {
+        btn.addEventListener("click", function() {
+            //title is in p inside the div
+            var title = btn.querySelector("p").innerHTML;
+            var project = projects.find(project => project.title === title);
             console.log(project);
             createPopup(project.title);
             document.getElementById("popup").style.display = "block";
