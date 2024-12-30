@@ -40,7 +40,7 @@ export const info = {
     social: [
         {
             name: "LinkedIn",
-            link: "https://www.linkedin.com/in/josemarquesnox/",
+            link: "https://www.linkedin.com/in/josemarques-nox/",
             logo: "linkedin",
         },
         {
@@ -101,6 +101,15 @@ export function loadIcons() {
     }
 }
 
+export function loadDownload() {
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        const link = document.createElement('a');
+        link.href = 'data/cv.pdf'; // Replace with the actual path to your PDF file
+        link.download = 'JoséMarques_CV.pdf'; // Replace with the desired file name
+        link.click();
+    });
+}
+
 export function loadInfo() {
 
     document.getElementById("namebio").innerHTML = `<h1 class="display-4" id="namebio">${info.name}</h1>`;
@@ -121,4 +130,5 @@ export function loadBio() {
     loadInfo();
     loadTimestamps();
     loadIcons();
+    loadDownload();
 }
