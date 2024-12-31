@@ -182,6 +182,7 @@ export function loadProjectsPage(){
 }
 
 export function createPopup(title) {
+    title = title.toLowerCase();
     let popdiv = document.getElementById("popup-content");
     fetch('../pages/projects/' + title + '.html')
         .then(response => response.text())
