@@ -33,7 +33,7 @@ export const timestamps=[
 
 export const info = {
     name: "José Marques",
-    role: "Software Engeneering Student",
+    role: "Software Engineering Student",
     location: "Coimbra, Portugal",
     age: 26,
     email: "jmarquesnox@gmail.com",
@@ -57,11 +57,13 @@ export const info = {
     bio: `<p class="p-3">
             Hello! I'm José Marques.
             <br>
-            I'm a Software Engineering student at the Instituto Politecnico de Engenharia de Coimbra, in Portugal. I'm also a freelancer, working on several projects.
+            I'm a Software Engineering student at Instituto Superior de Engenharia de Coimbra, in Portugal. 
             <br>
-            I'm passionate about solving problems and learning new things. I'm always looking for new challenges and opportunities to grow.
+            I'm also a freelancer, working on several projects. 
             <br>
-            I'm currently looking for an internship in the software development field.
+            Passionate about solving problems and learning new things, I'm always looking for new challenges and opportunities to grow. 
+            <br>
+            Currently, I'm looking for an internship in the software development field.
         </p>`,
 };
 
