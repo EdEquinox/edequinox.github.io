@@ -9,6 +9,20 @@ export const languages = [
         how: "One of my favorite languages, the one I'm most confortable with even tho I don't use it as much as I used to. I've been using Java for the last 3 years.",
     },
     {
+        name: ".NET (C#)",
+        projects: getProjectsByLanguage("C#"),
+        level: 8,
+        logo: "csharp",
+        how: "I learnt on my degree and have been using C# in the last 3 years, on and off.",
+    },
+    {
+        name: "Flutter (Dart)",
+        projects: getProjectsByLanguage("Dart"),
+        level: 8,
+        logo: "flutter",
+        how: "I've been using Flutter for the last year to develop cross-platform mobile applications.",
+    },
+    {
         name: "Python",
         projects: getProjectsByLanguage("Python"),
         level: 7,

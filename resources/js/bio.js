@@ -29,6 +29,12 @@ export const timestamps=[
         title: "LACTOMETER",
         description: "I developed my biggest project yet, Lactometer, in cooperation with RaveShape.",
     },
+    {
+        color: "--accent-color:#A35C4F",
+        date: "Fev. 2025 - Aug. 2025",
+        title: "INTERNSHIP @ ESCADOTE",
+        description: "I did my internship at Escadote, a software development company in Coimbra, Portugal.",
+    }
 ]
 
 export const info = {
@@ -63,7 +69,9 @@ export const info = {
             <br>
             Passionate about solving problems and learning new things, I'm always looking for new challenges and opportunities to grow. 
             <br>
-            Currently, I'm looking for an internship in the software development field.
+            On my internship at Escadote, I had the opportunity to work with a team of experienced developers and learn from them using tools like Flutter and .NET.
+            <br>
+            Currently, I'm looking for a job or internship in the software development field.
         </p>`,
 };
 
