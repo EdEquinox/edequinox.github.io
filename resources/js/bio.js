@@ -32,8 +32,8 @@ export const timestamps=[
     {
         color: "--accent-color:#A35C4F",
         date: "Fev. 2025 - Aug. 2025",
-        title: "INTERNSHIP @ ESCADOTE",
-        description: "I did my internship at Escadote, a software development company in Coimbra, Portugal.",
+        title: "INTERNSHIP @ ByLine Solutions",
+        description: "I did my internship at ByLine Solutions, a software development company in Coimbra, Portugal.",
     }
 ]
 
@@ -63,7 +63,7 @@ export const info = {
     bio: `<p class="p-3">
             Hello! I'm José Marques.
             <br>
-            I'm a Software Engineering student at Instituto Superior de Engenharia de Coimbra, in Portugal. 
+            I'm a final-year Software Engineering student at Instituto Superior de Engenharia de Coimbra, in Portugal. 
             <br>
             I'm also a freelancer, working on several projects. 
             <br>
